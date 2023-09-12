@@ -1,12 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { RouterModule } from '@angular/router';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
-import { LoginModule } from './autenticacao';
+import { LoginModule, LoginRoutingModule } from './autenticacao';
+
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -18,8 +21,10 @@ import { LoginModule } from './autenticacao';
     BrowserAnimationsModule,
     MatButtonModule,
     LoginModule,
+    LoginRoutingModule,
+    RouterModule,
 
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
